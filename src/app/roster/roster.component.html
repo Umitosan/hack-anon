@@ -1,3 +1,11 @@
-<p>
-  roster works!
-</p>
+<h3>Roster:</h3>
+  <div *ngFor="let member of members | async">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{member.name}}</h3>
+      </div>
+      <div class="panel-body">
+        {{member.role}}
+      </div>
+    </div>
+  </div>

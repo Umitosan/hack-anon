@@ -1,0 +1,22 @@
+{ "members": [{
+    "name": "Morpheus",
+    "role": "clan leader",
+    "tech": "Mind",
+    "bio": "Badass leader of the underground resistance against cyborg overloards"
+    }, {
+    "name": "Cypher",
+    "role": "Master Tech",
+    "tech": "everything electric",
+    "bio": "grew up on monochrome green text"
+      }, {
+    "name": "Trinity",
+    "role": "Master Tech",
+    "tech": "Mind/body connection",
+    "bio": "Dodges agents with ease"
+      }, {
+    "name": "Tank",
+    "role": "Enforsement",
+    "tech": "Metal and Bullets",
+    "bio": "Doing all the dirty work so you can sit on your ass"
+  }]
+}
