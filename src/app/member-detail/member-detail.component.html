@@ -2,10 +2,9 @@
   <h1>{{(memberToDisplay | async)?.name}}'s Profile</h1>
 
   <div>
-    <h3>{{(memberToDisplay | async)?.role}}</h3>
+    <p>Role: {{(memberToDisplay | async)?.role}}</p>
     <p>Tech: {{(memberToDisplay | async)?.tech}}</p>
-    <p>BIO:</p>
-    <p>{{(memberToDisplay | async)?.bio}}</p>
+    <p>Bio: {{(memberToDisplay | async)?.bio}}</p>
   </div>
 
 </div>

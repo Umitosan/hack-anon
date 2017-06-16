@@ -1,0 +1,24 @@
+<button class="btn btn-default btn-sm" *ngIf="editClicked === false" (click)="editButtonlicked()">EDIT</button>
+
+<div class="editArea" *ngIf="editClicked === true" >
+
+  <div class="container">
+    <h3>Edit Member</h3>
+    <label>New Member Name:</label>
+    <input [(ngModel)]="selectedMember.name">
+    <br>
+    <label>New Member Role:</label>
+    <input [(ngModel)]="selectedMember.role">
+    <br>
+    <label>New Member Tech:</label>
+    <input [(ngModel)]="selectedMember.tech">
+    <br>
+    <label>New Member Bio: </label>
+    <textarea [(ngModel)]="selectedMember.bio" rows="4" cols="45" ></textarea>
+    <br>
+    <button class="btn btn-success btn-sm" (click)="saveClicked(selectedMember)">SAVE</button>
+    <button class="btn btn-warning btn-sm" (click)="deleteClicked(selectedMember)">DELTE</button>
+
+  </div>
+
+</div>

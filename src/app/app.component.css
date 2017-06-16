@@ -5,9 +5,20 @@
 
 .navbar {
   font-family: 'Source Code Pro', monospace;
+  margin-bottom: 0;
 }
 
 .masterCompBody {
   font-family: 'PT Mono', monospace;
   color: green;
+}
+
+.navbar-brand {
+  font-family: 'Electrolize', sans-serif;
+  font-size: 2em;
+  color: #22313F ;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-shadow: -0.1em -0.05em 0 lightgreen;
 }

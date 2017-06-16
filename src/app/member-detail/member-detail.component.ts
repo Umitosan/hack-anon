@@ -24,4 +24,5 @@ export class MemberDetailComponent implements OnInit {
    });
    this.memberToDisplay = this.memberService.getMemberById(this.memberId);
   }
+
 }

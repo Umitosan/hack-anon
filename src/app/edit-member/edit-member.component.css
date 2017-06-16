@@ -1,0 +1,13 @@
+* {
+  color: #1e287f;
+  font-family: 'Source Code Pro', monospace;
+}
+
+textarea {
+  margin-left: 8px;
+}
+
+button {
+  margin-bottom: 5px;
+  font-weight: bold;
+}

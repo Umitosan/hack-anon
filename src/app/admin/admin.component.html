@@ -3,7 +3,7 @@
 
   <h2>Welcome Admin</h2>
 
-  <button class="btn btn-default btn-sm" (click)="addMemberClicked()">Add Member</button>
+  <button class="btn btn-default btn-sm" *ngIf="showNewMemberForm === false" (click)="addMemberClicked()">Add Member</button>
 
   <div class="newMemberArea" *ngIf="showNewMemberForm === true">
 
@@ -14,30 +14,22 @@
       <div class="panel-body">
         <div>
           <div>
-            <label>Member's Name</label>
-            <br>
+            <label>Name</label><br>
             <input #newName>
           </div>
-
           <div>
-            <label>Member's Role</label>
-            <br>
+            <label>Clan Role</label><br>
             <input #newRole>
           </div>
-
           <div>
-            <label>Member's Tech</label>
-            <br>
+            <label>Tech speciality</label><br>
             <input #newTech>
           </div>
-
           <div>
-            <label>Member's Biography</label>
-            <br>
-            <input #newBio>
-          </div>
-
-          <button (click)="submitForm(newName.value, newRole.value, newTech.value, newBio.value); newName.value=''; newRole.value=''; newTech.value=''; newBio.value='';">Save</button>
+            <label>Biography</label><br>
+            <textarea #newBio rows="5" cols="60"></textarea>
+          </div><br>
+          <button class="btn btn-default btn-sm" (click)="submitForm(newName.value, newRole.value, newTech.value, newBio.value); newName.value=''; newRole.value=''; newTech.value=''; newBio.value='';">Save</button>
         </div>
       </div>
     </div>
