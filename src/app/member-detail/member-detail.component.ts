@@ -13,9 +13,15 @@ import { FirebaseObjectObservable } from 'angularfire2/database';
 })
 
 export class MemberDetailComponent implements OnInit {
+  memberId: string;
+  memberToDisplay;
 
   constructor(private route: ActivatedRoute, private location: Location, private memberService: MemberService) { }
 
   ngOnInit() {
+    this.route.params.forEach((urlParameters) => {
+     this.memberId = urlParameters['id'];
+   });
+   this.memberToDisplay = this.memberService.getMemberById(this.memberId);
   }
 }
