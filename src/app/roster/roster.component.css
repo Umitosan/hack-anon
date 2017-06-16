@@ -9,3 +9,8 @@
 .memberEdit {
   float: right;
 }
+
+.DBID {
+  float: right;
+  font-size: 16px;
+}
