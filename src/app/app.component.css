@@ -1,0 +1,13 @@
+/*font-family: 'Source Code Pro', monospace;*/
+/*font-family: 'Orbitron', sans-serif;*/
+/*font-family: 'PT Mono', monospace;*/
+/*font-family: 'Electrolize', sans-serif;*/
+
+.navbar {
+  font-family: 'Source Code Pro', monospace;
+}
+
+.masterCompBody {
+  font-family: 'PT Mono', monospace;
+  color: green;
+}

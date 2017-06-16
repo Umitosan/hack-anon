@@ -1,3 +1,13 @@
-<p>
-  front works!
-</p>
+<h4>Front Page!</h4>
+<p>list all the members</p>
+
+<div *ngFor="let member of members">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">{{member.name}}</h3>
+    </div>
+    <div class="panel-body">
+      {{member.role}}
+    </div>
+  </div>
+</div>
