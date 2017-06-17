@@ -1,18 +1,13 @@
 
-<div class="container">
-  
-  <h1>the forum</h1>
+<div class='container'>
 
-  <div *ngFor="let post of posts | async">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1 class="panel-title">{{post.title}}</h1>
-      </div>
-      <div class="panel-body">
-        <h4><b>Title:</b> {{post.title}}</h4>
+  <h1 id="maintitle">Teh forumz</h1>
+  <div *ngFor='let post of posts | async'>
+    <div class='panel panel-default'>
+      <h1 class='panel-title'>{{post.title}}</h1>
+      <div class='panel-body'>
         <p>Tech:{{post.body}}</p>
-        <p>Author: {{post.author}}</p>
-
+        <p> - {{post.author}}</p>
       </div>
     </div>
   </div>

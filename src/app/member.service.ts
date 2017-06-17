@@ -24,7 +24,7 @@ export class MemberService {
   }
 
   updateMember(localUpdatedMember){
-    var memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
+    let memberEntryInFirebase = this.getMemberById(localUpdatedMember.$key);
     memberEntryInFirebase.update({name: localUpdatedMember.name,
                               role: localUpdatedMember.role,
                               tech: localUpdatedMember.tech,
@@ -33,7 +33,7 @@ export class MemberService {
   }
 
   deleteMember(localMemberToDelete){
-    var memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
+    let memberEntryInFirebase = this.getMemberById(localMemberToDelete.$key);
     memberEntryInFirebase.remove();
   }
 
