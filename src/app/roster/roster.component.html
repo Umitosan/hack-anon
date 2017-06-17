@@ -1,4 +1,6 @@
-<h2>Clan Members</h2>
+<div *ngIf="currentRoute !== '/admin' ">
+  <h2>Clan Members</h2>
+</div>
 
 <p>Filter users </p>
 <select (change)="onChange($event.target.value)">
