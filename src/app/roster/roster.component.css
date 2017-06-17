@@ -1,6 +1,10 @@
 /*font-family: 'PT Mono', monospace;*/
 /*font-family: 'Electrolize', sans-serif;*/
 
+h2  {
+  text-align: center;
+}
+
 .panel-title {
   font-family: 'PT Mono', monospace;
   font-size: 26px;

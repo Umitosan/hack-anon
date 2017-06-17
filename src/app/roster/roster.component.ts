@@ -14,6 +14,7 @@ import { FirebaseListObservable } from 'angularfire2/database';
 export class RosterComponent implements OnInit {
   members: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  desiredFilter: string = "all";
 
   constructor(private router: Router, private memberService: MemberService) { }
 
@@ -25,6 +26,10 @@ export class RosterComponent implements OnInit {
     this.router.navigate(['members', clickedMember.$key]);
   }
 
+  onChange(dropdownOption) {
+    this.desiredFilter = dropdownOption;
+  }
+
 }
 
 
@@ -32,4 +37,5 @@ export class RosterComponent implements OnInit {
 // name
 // role
 // tech
+// years
 // bio

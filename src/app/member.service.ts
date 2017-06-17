@@ -28,6 +28,7 @@ export class MemberService {
     memberEntryInFirebase.update({name: localUpdatedMember.name,
                               role: localUpdatedMember.role,
                               tech: localUpdatedMember.tech,
+                              years: localUpdatedMember.years,
                               bio: localUpdatedMember.bio});
   }
 

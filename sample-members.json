@@ -1,22 +1,39 @@
-{ "members": [{
-    "name": "Morpheus",
-    "role": "clan leader",
-    "tech": "Mind",
-    "bio": "Badass leader of the underground resistance against cyborg overloards"
-    }, {
-    "name": "Cypher",
-    "role": "Master Tech",
-    "tech": "everything electric",
-    "bio": "grew up on monochrome green text"
-      }, {
-    "name": "Trinity",
-    "role": "Master Tech",
-    "tech": "Mind/body connection",
-    "bio": "Dodges agents with ease"
-      }, {
-    "name": "Tank",
-    "role": "Enforsement",
-    "tech": "Metal and Bullets",
-    "bio": "Doing all the dirty work so you can sit on your ass"
-  }]
+{
+  "members" : {
+    "0" : {
+      "bio" : "Morpheus is the captain of the Nebuchadnezzar, which is a hovercraft of the human forces of the last human city, Zion, in a devastated world where most humans are grown by sentient Machines and kept imprisoned in the Matrix, a virtual computer-generated world. Morpheus was once a human living inside the Matrix until he was freed earlier in life.",
+      "name" : "Morpheus",
+      "role" : "clan leader",
+      "tech" : "Mind",
+      "years": 34
+    },
+    "1" : {
+      "bio" : "Cypher tells Trinity that she like to watch Neo. He later offers Neo a drink, regretting taking the blue pill. He mocks him for trying to save the world. He meets with Agent Smith at a restaurant, eating a steak and smoking a cigar, which prompts him declare that ignorance is bliss. He makes a deal to be reinserted into the Matrix in exchange for Morpheus. He wants to remember nothing and be a famous actor. Cypher leaves the Matrix and later trys to kill Tank & Dozer by electrocuting them, and unplugs Apoc and Switch, killing them as well. Tank is still alive and kills him.",
+      "name" : "Cypher",
+      "role" : "Master Tech",
+      "tech" : "everything electric",
+      "years": 12
+    },
+    "2" : {
+      "bio" : "Like the series' other principal characters, Trinity is a computer programmer and a hacker who has escaped from the Matrix, a sophisticated computer program in which most of the human race is imprisoned. Though few specifics are revealed about her previous life inside the Matrix, we are told that Morpheus, one of a number of real-world hovercraft commanders, initially identified her and helped her escape from the program. At the beginning of the series, she is first mate on Morpheus' Nebuchadnezzar and serves mainly as a go-between for him and the individuals he wishes to free from the Matrix. As the series progresses, her primary importance as a character becomes her close relationship with Neo. She is skilled with computers, at operating vehicles both inside and outside the Matrix, and in martial arts.",
+      "name" : "Trinity",
+      "role" : "Master Tech",
+      "tech" : "Mind/body connection",
+      "years": 18
+    },
+    "3" : {
+      "bio" : "Tank is Dozers little brother and was born outside the Matrix. An operator, he loads programs designed to teach Neo marshal arts. He notices errors in the Matrix code when agents arrive in an area. He also finds some building plans. Tank kills Cypher when he attempts to kill him and everyone else.",
+      "name" : "Tank",
+      "role" : "Enforsement",
+      "tech" : "Metal and Bullets",
+      "years": 16
+    },
+    "-KmnCJ77wdENrEI8lrES" : {
+      "bio" : "Oracle is a old lady and a mysterious but powerful figure, she has the power of foresight and guides the humans in the Matrix.",
+      "name" : "The Oracle",
+      "role" : "Seer",
+      "tech" : "ESP",
+      "years": 45
+    }
+  }
 }

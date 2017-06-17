@@ -13,6 +13,7 @@ import { AdminComponent } from './admin/admin.component';
 import { RosterComponent } from './roster/roster.component';
 import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
+import { ServiceYearsPipe } from './service-years.pipe';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const firebaseConfig = {
     AdminComponent,
     RosterComponent,
     MemberDetailComponent,
-    EditMemberComponent
+    EditMemberComponent,
+    ServiceYearsPipe
   ],
   imports: [
     BrowserModule,

@@ -26,10 +26,14 @@
             <input #newTech>
           </div>
           <div>
+            <label>Years served</label><br>
+            <input #newYears>
+          </div>
+          <div>
             <label>Biography</label><br>
             <textarea #newBio rows="5" cols="60"></textarea>
           </div><br>
-          <button class="btn btn-default btn-sm" (click)="submitForm(newName.value, newRole.value, newTech.value, newBio.value); newName.value=''; newRole.value=''; newTech.value=''; newBio.value='';">Save</button>
+          <button class="btn btn-default btn-sm" (click)="submitForm(newName.value, newRole.value, newTech.value, newYears.value, newBio.value); newName.value=''; newRole.value=''; newTech.value=''; newYears.value; newBio.value='';">Save</button>
         </div>
       </div>
     </div>
