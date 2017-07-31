@@ -41,6 +41,7 @@ Hack Anon is an online community hub for hackers all backgrounds, whether white-
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
 * [Bower](https://bower.io/)
+* (for sass) Ruby and the sass gem `$ gem install sass`
 
 ## Installation
 
@@ -48,7 +49,7 @@ Hack Anon is an online community hub for hackers all backgrounds, whether white-
 * $`git clone`
 * $`cd hack-anon`
 * $`npm install`
-* $`bower install`
+* $`bower install
 
 ### Build & Run
 
