@@ -6,6 +6,7 @@ import { RosterComponent }   from './roster/roster.component';
 import { AdminComponent }   from './admin/admin.component';
 import { MemberDetailComponent }   from './member-detail/member-detail.component';
 import { ForumComponent }   from './forum/forum.component';
+import { About2Component }   from './about2/about2.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
   {
     path: 'forum',
     component: ForumComponent
+  },
+  {
+    path: 'about2',
+    component: About2Component
   }
 ];
 
