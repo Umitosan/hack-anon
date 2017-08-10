@@ -15,6 +15,7 @@ import { MemberDetailComponent } from './member-detail/member-detail.component';
 import { EditMemberComponent } from './edit-member/edit-member.component';
 import { ServiceYearsPipe } from './service-years.pipe';
 import { ForumComponent } from './forum/forum.component';
+import { About2Component } from './about2/about2.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     MemberDetailComponent,
     EditMemberComponent,
     ServiceYearsPipe,
-    ForumComponent
+    ForumComponent,
+    About2Component
   ],
   imports: [
     BrowserModule,
