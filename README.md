@@ -51,6 +51,24 @@ Hack Anon is an online community hub for hackers all backgrounds, whether white-
 * $`npm install`
 * $`bower install`
 
+## Firebase setup
+
+* Create a new database of your own using your firebase console [https://console.firebase.google.com](https://console.firebase.google.com)
+* name the database 'hack-anon' just like the project
+* Create a api-keys file here: (app-root-folder)/src/app/api-keys.ts
+* fill the file with your database credentials by copying and pasting the info from the console / Overview / 'Add Firebase to your web app' button
+* here's an example, be sure to use the var name 'masterFirebaseConfig'
+```typescript
+export var masterFirebaseConfig = {
+  apiKey: "fFESDFioDS&FYsdf&EFS7834kdfjDH",
+  authDomain: "hack-anon.firebaseapp.com",
+  databaseURL: "https://hack-anon.firebaseio.com",
+  projectId: "hack-anon",
+  storageBucket: "hack-anon.appspot.com",
+  messagingSenderId: "483748704371"
+};
+```
+
 ### Build & Run
 
 * a browser window should open showing the app, otherwise...
