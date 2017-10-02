@@ -49,7 +49,7 @@ Hack Anon is an online community hub for hackers all backgrounds, whether white-
 * $`git clone`
 * $`cd hack-anon`
 * $`npm install`
-* $`bower install
+* $`bower install`
 
 ### Build & Run
 
