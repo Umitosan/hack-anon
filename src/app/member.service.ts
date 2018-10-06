@@ -2,15 +2,19 @@ import { Injectable } from '@angular/core';
 import { Member } from './member.model';
 // import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 @Injectable()
 
 export class MemberService {
   // members: FirebaseListObservable<any[]>;
   members: AngularFireList<any[]>;
+  // members: Observable<any[]>;
   database: AngularFireDatabase;
 
   constructor(private db: AngularFireDatabase) {
+    // NOTE: db.list('members')                is TYPE AngularFireList<any[]>
+    // NOTE: db.list('members').valueChanges() is TYPE  Observable<any[]>
     this.members = db.list('members');
     this.database = db;
   }
@@ -19,8 +23,9 @@ export class MemberService {
     return this.members.valueChanges();
   }
 
-  addMember(newMember: Member) {
-    // this.members.push(newMember);
+  addMember(newMember: any) {
+    // (public name: string, public role: string, public tech: string, public years: number, public bio: string)
+    this.members.push(newMember);
   }
 
   getMemberById(memberId: string){

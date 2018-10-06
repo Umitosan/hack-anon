@@ -14,8 +14,8 @@ import { Observable, Subscription } from 'rxjs';
 })
 
 export class RosterComponent implements OnInit {
-  testSub: Subscription;
-  memTest: any;
+  // testSub: Subscription;
+  // memTest: any;
   // members: FirebaseListObservable<any[]>;
   // members: AngularFireList<any[]>;
   members: Observable<any[]>;
@@ -24,10 +24,10 @@ export class RosterComponent implements OnInit {
 
   constructor(public router: Router, public memberService: MemberService) {
     this.members = memberService.getMembers();
-    this.testSub = memberService.getMembers().subscribe(data => {
-      this.memTest = data;
-      console.log("memTest: ", data);
-    });
+    // this.testSub = memberService.getMembers().subscribe(data => {
+    //   this.memTest = data;
+    //   console.log("memTest: ", data);
+    // });
   }
 
   ngOnInit(){
