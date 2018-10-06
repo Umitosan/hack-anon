@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Post } from '../post.model';
 import { Router } from '@angular/router';
 import { PostService } from '../post.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+// import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-forum',
@@ -11,12 +13,13 @@ import { FirebaseListObservable } from 'angularfire2/database';
   providers: [PostService]
 })
 export class ForumComponent implements OnInit {
-  posts: FirebaseListObservable<any[]>;
+  // posts: Observable<any[]>;
+  posts: AngularFireList<any[]>;
 
   constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
-    this.posts = this.postService.getPosts();
+    // this.posts = this.postService.getPosts();
   }
 
 }

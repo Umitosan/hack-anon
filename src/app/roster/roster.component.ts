@@ -2,7 +2,9 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Member } from '../member.model';
 import { Router } from '@angular/router';
 import { MemberService } from '../member.service';
-import { FirebaseListObservable } from 'angularfire2/database';
+// import { FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-roster',
@@ -12,14 +14,21 @@ import { FirebaseListObservable } from 'angularfire2/database';
 })
 
 export class RosterComponent implements OnInit {
-  members: FirebaseListObservable<any[]>;
+  memberSub: Subscription;
+  // members: FirebaseListObservable<any[]>;
+  members: AngularFireList<any[]>;
   currentRoute: string = this.router.url;
   desiredFilter: string = "all";
 
-  constructor(private router: Router, private memberService: MemberService) { }
+  constructor(public router: Router, public memberService: MemberService) {
+    this.memberSub = memberService.getMembers().subscribe(data => {
+      this.members = data;
+      console.log("members from DB: ", data);
+    });
+  }
 
   ngOnInit(){
-    this.members = this.memberService.getMembers();
+    // this.members = this.memberService.getMembers();
   }
 
   goToDetailPage(clickedMember) {
