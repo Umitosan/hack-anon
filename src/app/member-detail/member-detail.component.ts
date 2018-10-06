@@ -18,7 +18,9 @@ export class MemberDetailComponent implements OnInit {
   memberId: string;
   memberToDisplay: any;
 
-  constructor(private route: ActivatedRoute, private location: Location, private memberService: MemberService) { }
+  constructor(private route: ActivatedRoute, private location: Location, private memberService: MemberService) {
+
+  }
 
   ngOnInit() {
     this.route.params.forEach((urlParameters) => {
