@@ -4,7 +4,7 @@ import { Location } from '@angular/common';
 import { Member } from '../member.model';
 import { MemberService } from '../member.service';
 // import { FirebaseObjectObservable } from 'angularfire2/database';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList, AngularFireObject } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -16,17 +16,19 @@ import { Observable } from 'rxjs';
 
 export class MemberDetailComponent implements OnInit {
   memberId: string;
-  memberToDisplay: any;
+  memberToDisplay: Observable<any>;
+  memServ: any;
+  afDB: any;
 
-  constructor(private route: ActivatedRoute, private location: Location, private memberService: MemberService) {
-
+  constructor(public db: AngularFireDatabase, private route: ActivatedRoute, private location: Location, private memberService: MemberService) {
+    this.afDB = db;
+    this.memServ = memberService;
+    this.memberId = this.route.params['_value']['id'];
+    console.log("this.memberId = ", this.memberId);
   }
 
   ngOnInit() {
-    this.route.params.forEach((urlParameters) => {
-     this.memberId = urlParameters['id'];
-   });
-   this.memberToDisplay = this.memberService.getMemberById(this.memberId);
+    this.memberToDisplay = this.memServ.getMemberById(this.memberId);
   }
 
 }

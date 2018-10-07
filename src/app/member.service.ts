@@ -1,26 +1,31 @@
 import { Injectable } from '@angular/core';
 import { Member } from './member.model';
-// import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AngularFireDatabase, AngularFireList, AngularFireObject  } from 'angularfire2/database';
 import { Observable } from 'rxjs';
 
 @Injectable()
 
 export class MemberService {
-  // members: FirebaseListObservable<any[]>;
-  members: AngularFireList<any[]>;
-  // members: Observable<any[]>;
-  database: AngularFireDatabase;
+  members: AngularFireList<any>;
+  // members: AngularFireObject<any>;
+  afDB: AngularFireDatabase;
 
   constructor(private db: AngularFireDatabase) {
     // NOTE: db.list('members')                is TYPE AngularFireList<any[]>
     // NOTE: db.list('members').valueChanges() is TYPE  Observable<any[]>
+    this.afDB = db
     this.members = db.list('members');
-    this.database = db;
+    // this.members = db.object('members');
+    // this.testSub = db.object('members/0').valueChanges().subscribe(function(mem) {
+    //   // console.log(mem);
+    //   this.testMem = mem;
+    // });
   }
 
   getMembers() {
-    return this.members.valueChanges();
+    // return this.members.valueChanges();
+    // return this.members.shapshotChanges();
+    return this.members;
   }
 
   addMember(newMember: any) {
@@ -29,7 +34,8 @@ export class MemberService {
   }
 
   getMemberById(memberId: string){
-    return this.database.object('/members/' + memberId);
+    console.log('getMemberById trying index: ', memberId);
+    return this.afDB.object('members/'+memberId).valueChanges();
   }
 
   updateMember(localUpdatedMember){

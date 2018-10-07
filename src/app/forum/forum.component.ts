@@ -19,7 +19,7 @@ export class ForumComponent implements OnInit {
   constructor(private router: Router, private postService: PostService) { }
 
   ngOnInit() {
-    // this.posts = this.postService.getPosts();
+    this.posts = this.postService.getPosts();
   }
 
 }

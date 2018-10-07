@@ -14,28 +14,26 @@ import { Observable, Subscription } from 'rxjs';
 })
 
 export class RosterComponent implements OnInit {
-  // testSub: Subscription;
-  // memTest: any;
-  // members: FirebaseListObservable<any[]>;
-  // members: AngularFireList<any[]>;
   members: Observable<any[]>;
   currentRoute: string = this.router.url;
   desiredFilter: string = "all";
+  testSub: Observable<any[]>;
 
   constructor(public router: Router, public memberService: MemberService) {
-    this.members = memberService.getMembers();
-    // this.testSub = memberService.getMembers().subscribe(data => {
-    //   this.memTest = data;
-    //   console.log("memTest: ", data);
-    // });
-  }
+    this.members = memberService.getMembers().valueChanges();
+    // this.testSub = this.memberService.getMembers().snapshotChanges()
+  } // constructor
 
   ngOnInit(){
   }
 
-  goToDetailPage(clickedMember) {
-    this.router.navigate(['members', clickedMember.$key]);
+  goToDetailPage(clickedMember, index) {
+    // console.log('clickedMember = ', clickedMember);
+    // console.log('index = ', index);
+    // console.log('typeof index = ', typeof index);
+    this.router.navigate(['members', index]);
   }
+
 
   onChange(dropdownOption) {
     this.desiredFilter = dropdownOption;
