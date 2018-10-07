@@ -13,8 +13,7 @@ import { Observable } from 'rxjs';
   providers: [PostService]
 })
 export class ForumComponent implements OnInit {
-  // posts: Observable<any[]>;
-  posts: AngularFireList<any[]>;
+  posts: Observable<any[]>;
 
   constructor(private router: Router, private postService: PostService) { }
 

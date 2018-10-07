@@ -22,9 +22,9 @@ export class AdminComponent implements OnInit {
 
 
   submitForm(name: string, role: string, tech: string, years: number, bio: string) {
-    var newMember: Member = new Member(name, role, tech, years,bio);
-    this.memberService.addMember(newMember);
-    this.showNewMemberForm = false;
+    // var newMember: Member = new Member(name, role, tech, years,bio);
+    // this.memberService.addMember(newMember);
+    // this.showNewMemberForm = false;
   }
 
   // member model

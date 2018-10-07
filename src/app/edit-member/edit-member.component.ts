@@ -17,14 +17,14 @@ export class EditMemberComponent implements OnInit {
   }
 
   saveClicked(memberToUpdate) {
-    this.memberService.updateMember(memberToUpdate);
-    this.editClicked = false;
+    // this.memberService.updateMember(memberToUpdate);
+    // this.editClicked = false;
   }
 
   deleteClicked(memberToDelete) {
-    if(confirm("Are you sure you want to delete this item from the inventory?")) {
-      this.memberService.deleteMember(memberToDelete);
-    }
+    // if(confirm("Are you sure you want to delete this item from the inventory?")) {
+    //   this.memberService.deleteMember(memberToDelete);
+    // }
   }
 
   editButtonlicked() {

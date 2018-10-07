@@ -22,7 +22,7 @@ export class PostService {
   }
 
   addPost(newPost: any) {
-    this.posts.push(newPost);
+    // this.posts.push(newPost);
   }
 
   /*
